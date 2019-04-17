@@ -150,22 +150,7 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="row">
-				<div class="feature-full-1col">
-					<div class="image" style="background-image: url(images/hotel_feture_1.jpg);">
-						<div class="descrip text-center">
-							<p><small>For as low as</small><span th:text="${friend.price}">$50/night</span></p>
-						</div>
-					</div>
-					<div class="desc">
-						<p th:text="${friend.id}" type="hidden" ></p>
-						<h3 th:text="${friend.firstName}">Erick</h3>
-						<p th:text="${friend.bio}">Hello, I´m Erick and I love pets! I live in a apartment in the city center, and I can host you dog during weekdays only</p>
-						<p><a th:href="@{'/friend/' + ${friend.id}}" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
-					</div>
-				</div>
-
 				<div class="feature-full-2col">
 					<div class="f-hotel">
 						<div class="image" style="background-image: url(images/hotel_feture_2.jpg);">
@@ -175,8 +160,8 @@
 						</div>
 						<div class="desc">
 							<p th:text="${friend.id}" type="hidden" ></p>
-							<h3 th:text="${friend.firstName}">Nuno</h3>
-							<p th:text="${friend.bio}">I'm Nuno. I'm available to host your pet at weekends and holiday. I live around the river side </p>
+							<h3 th:text="${friend.firstName}"></h3>
+							<p th:text="${friend.bio}"></p>
 							<p><a th:href="@{'/friend/' + ${friend.id}}" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
 						</div>
 					</div>
@@ -188,8 +173,8 @@
 						</div>
 						<div class="desc">
 							<p th:text="${friend.id}" type="hidden" ></p>
-							<h3 th:text="${friend.firstName}">Ana</h3>
-							<p th:text="${friend.bio}" >Hello! I'm Ana and a have a house with a big garden. I have a dog, he's lovely and friendly. If you like us we'll be happy to host you anytime.</p>
+							<h3 th:text="${friend.firstName}"></h3>
+							<p th:text="${friend.bio}" ></p>
 							<p><a th:href="@{'/friend/' + ${friend.id}}" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
 						</div>
 					</div>
