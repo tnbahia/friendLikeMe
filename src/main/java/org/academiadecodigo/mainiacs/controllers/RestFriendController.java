@@ -1,6 +1,7 @@
 package org.academiadecodigo.mainiacs.controllers;
 
-import org.academiadecodigo.mainiacs.models.Service;
+
+import org.academiadecodigo.mainiacs.persistence.models.Offer;
 import org.academiadecodigo.mainiacs.services.FriendService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -21,24 +22,23 @@ public class RestFriendController {
 
 
     @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
-    public ResponseEntity<?> addService(@RequestBody Service service, BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity addOffer(/*@valid*/ @RequestBody Offer offer, BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
 
         if (bindingResult.hasErrors()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
-        Service savedService = friendService.save(service);
+        friendService.save(offer);
         // get help from the framework building the path for the newly created resource
-        UriComponents uriComponents = uriComponentsBuilder.path("/api/host/" + service.getId()).build();
+        //UriComponents uriComponents = uriComponentsBuilder.path("/api/host/" + offer..build();
 
 
         // set headers with the created path
-        HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(uriComponents.toUri());
+        //HttpHeaders headers = new HttpHeaders();
+        //headers.setLocation(uriComponents.toUri());
 
-        return new ResponseEntity<>(headers, HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
-
 
 
 }

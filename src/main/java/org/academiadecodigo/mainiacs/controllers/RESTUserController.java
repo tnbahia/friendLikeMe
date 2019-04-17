@@ -1,6 +1,6 @@
 package org.academiadecodigo.mainiacs.controllers;
 
-import org.academiadecodigo.mainiacs.persistence.models.Service;
+import org.academiadecodigo.mainiacs.persistence.models.Offer;
 import org.academiadecodigo.mainiacs.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,17 +17,17 @@ public class RESTUserController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/")
     public ResponseEntity<List> listHosts() {
-        List<Service> serviceList = userService.listServices();
-        return new ResponseEntity<List>(serviceList, HttpStatus.OK);
+        List<Offer> offerList = userService.listServices();
+        return new ResponseEntity<List>(offerList, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/{city}")
     public ResponseEntity<List> searchHosts(@PathVariable String city) {
-        List<Service> serviceList = userService.listServices();
-        List<Service> filteredList = new LinkedList<>();
-        for (Service service: serviceList) {
-            if (service.getCity().equals(city)) {
-                filteredList.add(service);
+        List<Offer> offerList = userService.listServices();
+        List<Offer> filteredList = new LinkedList<>();
+        for (Offer offer : offerList) {
+            if (offer.getCity().equals(city)) {
+                filteredList.add(offer);
             }
         }
         return new ResponseEntity<List>(filteredList,HttpStatus.OK);

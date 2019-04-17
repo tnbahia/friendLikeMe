@@ -6,14 +6,14 @@ import java.util.Date;
 
 @Entity
 @Table(name="services")
-public class Service {
+public class Offer {
     private String name;
     private String email;
     private String phone;
     private Date startDate;
     private Date endDate;
 
-    public Service(String name, String email, String phone, Date startDate, Date endDate, String city) {
+    public Offer(String name, String email, String phone, Date startDate, Date endDate, String city) {
         this.name = name;
         this.email = email;
         this.phone = phone;
