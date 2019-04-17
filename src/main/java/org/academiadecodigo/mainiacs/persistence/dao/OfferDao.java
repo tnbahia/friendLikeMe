@@ -5,14 +5,13 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
 @Repository
 public class OfferDao {
+    private List<Offer> list = new LinkedList<>();
     private Class<Offer> offerClass = Offer.class;
 
     @PersistenceContext
@@ -25,7 +24,6 @@ public class OfferDao {
         Root<Offer> root = criteriaQuery.from(offerClass);
         return em.createQuery(criteriaQuery).getResultList();*/
 
-        List<Offer> offerList = new LinkedList<>();
         Offer s = new Offer("Tiago",
                 "ojicois",
                 "09809123",
@@ -39,9 +37,9 @@ public class OfferDao {
                 new Date(2019, 7, 26),
                 "Porto");
 
-        offerList.add(s);
-        offerList.add(t);
-        return offerList;
+        list.add(s);
+        list.add(t);
+        return list;
     }
 }
 
