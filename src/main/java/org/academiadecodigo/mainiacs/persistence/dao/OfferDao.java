@@ -13,8 +13,8 @@ public class OfferDao {
 
     @PersistenceContext
     private EntityManager em;
-    private List<Offer> list;
 
+    private List<Offer> list;
 
     public void add (Offer offer) {
         list.add(offer);

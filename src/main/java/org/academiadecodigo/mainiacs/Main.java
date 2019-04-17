@@ -6,6 +6,6 @@ import org.academiadecodigo.mainiacs.persistence.models.Offer;
 public class Main {
     public static void main(String[] args) {
         RESTUserController r = new RESTUserController();
-        System.out.println(((Offer)r.listHosts().getBody().get(0)).getName());
+        System.out.println(((Offer)r.listAllHosts().getBody().get(0)).getName());
     }
 }
