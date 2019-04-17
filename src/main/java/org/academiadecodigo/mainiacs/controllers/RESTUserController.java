@@ -1,6 +1,6 @@
 package org.academiadecodigo.mainiacs.controllers;
 
-import org.academiadecodigo.mainiacs.models.Service;
+import org.academiadecodigo.mainiacs.persistence.models.Service;
 import org.academiadecodigo.mainiacs.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +26,7 @@ public class RESTUserController {
         List<Service> serviceList = userService.listServices();
         List<Service> filteredList = new LinkedList<>();
         for (Service service: serviceList) {
-            if (service.getCity() == city) {
+            if (service.getCity().equals(city)) {
                 filteredList.add(service);
             }
         }
