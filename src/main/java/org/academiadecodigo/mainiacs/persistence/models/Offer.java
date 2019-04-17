@@ -15,6 +15,7 @@ public class Offer {
     private Date endDate;
 
     public Offer(String name, String email, String phone, int price, Date startDate, Date endDate, String city) {
+
         this.name = name;
         this.email = email;
         this.phone = phone;
