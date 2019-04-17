@@ -5,18 +5,20 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name="offers")
+@Table(name = "offers")
 public class Offer {
     private String name;
     private String email;
     private String phone;
+    private int price;
     private Date startDate;
     private Date endDate;
 
-    public Offer(String name, String email, String phone, Date startDate, Date endDate, String city) {
+    public Offer(String name, String email, String phone, int price, Date startDate, Date endDate, String city) {
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.price = price;
         this.startDate = startDate;
         this.endDate = endDate;
         this.city = city;
