@@ -78,10 +78,12 @@ function populateCustomers(response) {
             "</div>" + "</div>" +
             "<div class='desc'>" +
             "<h3>" + element.name + "</h3>" +
-            "<p>" + element.date + "</p>" +
-            "<p>" + element.phone + "</p>" +
-            "<p>" + element.email + "</p>" +
+            "<p>From: " + element.startDate + "</p>" +
+            "<p>To: " + element.endDate + "</p>" +
+            "<p>Phone: " + element.phone + "</p>" +
+            "<p>Email: " + element.email + "</p>" +
             "</div></div></div>"
+
         ;
 
         $(elementStr).appendTo(offerTable);
