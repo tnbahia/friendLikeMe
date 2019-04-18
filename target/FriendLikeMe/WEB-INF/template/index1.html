@@ -122,13 +122,19 @@
                 <div class="row">
                     <div id="availability">
                         <form class="form ">
-                            <input class="form-control form-control-sm mr-3 w-75" type="text"
-                                   placeholder="Where do you need a Friend?" aria-label="Search">
-                            <i class="fas fa-search" aria-hidden="true"></i>
 
+                            <div class="form">
+                                <label for="exampleFormControlSelect1">Where do you need a Friend?"</label>
+                                <select class="form-control form-control-sm mr-3 w-75" id="exampleFormControlSelect1">
+                                    <option>Porto</option>
+                                    <option>Santo Tirso</option>
+
+                                </select>
+                            </div>
+                        </form>
                         <div class="a-col action">
-                            <button id="search-button">Search</button>
-                        </div></form>
+                            <button id="search-button" type="button"  class="btn btn-secondary">>Search</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,20 +144,10 @@
         <section id="populate_friends">
             <div id="featured-hotel" class="fh5co-bg-color">
                 <div class="container">
-
-                    <div class="row">
-                        <div class="feature-full-2col">
-                            <div class="section-title text-center">
-                                <h2>Friends</h2>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row" id="offer-table" >
 
 
-
                     </div>
-
                 </div>
             </div>
         </section>
