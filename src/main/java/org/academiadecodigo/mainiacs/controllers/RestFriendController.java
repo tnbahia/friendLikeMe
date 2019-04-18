@@ -26,9 +26,9 @@ public class RestFriendController {
     @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
     public ResponseEntity addOffer(/*@valid*/ @RequestBody Offer offer, BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
 
-        if (bindingResult.hasErrors()) {
+        /*if (bindingResult.hasErrors()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+        }*/
 
         friendService.save(offer);
         // get help from the framework building the path for the newly created resource

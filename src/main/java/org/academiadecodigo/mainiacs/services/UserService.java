@@ -14,25 +14,7 @@ public class UserService {
     private OfferDao offerDao = new OfferDao();
 
     public List<Offer> listServices() {
-        List<Offer> offerList = new LinkedList<>();
-        Offer s = new Offer("Tiago",
-                "ojicois",
-                "09809123",
-                40,
-                new Date(2019,1,23),
-                new Date(2019,2,26),
-                "Porto");
-        Offer t = new Offer("Bahia",
-                "sdfs",
-                "12312332",
-                30,
-                new Date(2019,4,23),
-                new Date(2019,7,26),
-                "Porto");
-
-        offerList.add(s);
-        offerList.add(t);
-        return offerList;
+        return offerDao.getList();
     }
 
     @Autowired

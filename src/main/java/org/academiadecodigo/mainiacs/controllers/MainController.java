@@ -12,6 +12,6 @@ public class MainController {
     @RequestMapping(method = RequestMethod.GET, path = {"/",""})
     public String home() {
         System.out.println("ochja");
-        return "test";
+        return "index1";
     }
 }

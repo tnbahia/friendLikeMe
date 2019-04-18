@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Friend like me</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A app to find a friend to your best friend"/>
-    <meta name="keywords" content=""/>
-    <meta name="author" content=""/>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Friend like me</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A app to find a friend to your best friend" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
 
 
-    <link rel="shortcut icon" href="favicon.ico">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,900,700,900italic' rel='stylesheet' type='text/css'> -->
 
-    <!-- Stylesheets -->
-    <!-- Dropdown Menu -->
-    <link rel="stylesheet" type="text/css" th:href="@{/css/superfish.css}">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,900,700,900italic' rel='stylesheet' type='text/css'> -->
+
+	<!-- Stylesheets -->
+	<!-- Dropdown Menu -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/superfish.css}">
+	<!-- Owl Slider -->
+	<!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
+	<!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+	<!-- Date Picker -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap-datepicker.min.css}">
+	<!-- CS Select -->
+	<link rel="stylesheet" type="text/css" th:href="@{css/cs-select.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/cs-skin-border.css}">
+
+	<!-- Themify Icons -->
+	<link rel="stylesheet" type="text/css" th:href="@{css/themify-icons.css}">
+	<!-- Flat Icon -->
+	<link rel="stylesheet" type="text/css" th:href="@{css/flaticon.css}">
+	<!-- Icomoon -->
+	<link rel="stylesheet" type="text/css" th:href="@{css/icomoon.css}">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" type="text/css" th:href="@{css/flexslider.css}">
+
+	<!-- Style -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+	<!-- Modernizr JS -->
+	<script th:src="@{js/modernizr-2.6.2.min.js}"></script>
+	<!-- FOR IE9 below -->
+	<![endif]-->
 
 </head>
 <body>
@@ -29,7 +55,7 @@
 					<h1 id="fh5co-logo"><a href="index.html">Friend logo</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a class="active" href="index.html">Home</a></li>
+							<li><a class="active" href="index1.html">Home</a></li>
 							<li>
 								<!--
 								<a href="hotel.html" class="fh5co-sub-ddown">Find a Friend</a>
@@ -38,7 +64,7 @@
 								 	<li><a href="services.html">A place</a></li>
 								</ul> -->
 							</li>
-							<li><a href="services.html">Become a Friend</a></li>
+							<li><a href="index1.html">Become a Friend</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -96,9 +122,7 @@
   						<input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Where do you need a Friend?" aria-label="Search">
   						<i class="fas fa-search" aria-hidden="true"></i>
   						<div class="a-col action">
-							<a href="#">
-								<span>Search</span>
-							</a>
+							<button id="search-button">Search</button>
 						</div>
 						</form>
 				</div>
@@ -120,32 +144,9 @@
 			</div>
 			<div class="row">
 				<div class="feature-full-2col">
-					<div class="f-hotel">
-						<div class="image" style="background-image: url(images/hotel_feture_2.jpg);">
-							<div class="descrip text-center">
-								<p><small>For as low as</small><span th:text="${friend.price}">$39/night</span></p>
-							</div>
-						</div>
-						<div class="desc">
-							<p th:text="${friend.id}" type="hidden" ></p>
-							<h3 th:text="${friend.firstName}"></h3>
-							<p th:text="${friend.bio}"></p>
-							<p><a th:href="@{'/friend/' + ${friend.id}}" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
-						</div>
-					</div>
-					<div class="f-hotel">
-						<div class="image" style="background-image: url(images/hotel_feture_3.jpg);">
-							<div class="descrip text-center">
-								<p><small>For as low as</small><span th:text="${friend.price}">$69/night</span></p>
-							</div>
-						</div>
-						<div class="desc">
-							<p th:text="${friend.id}" type="hidden" ></p>
-							<h3 th:text="${friend.firstName}"></h3>
-							<p th:text="${friend.bio}" ></p>
-							<p><a th:href="@{'/friend/' + ${friend.id}}" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
-						</div>
-					</div>
+					<table id="offer-table">
+
+					</table>
 				</div>
 			</div>
 
@@ -250,29 +251,29 @@
 	<!-- END fh5co-wrapper -->
 	
 	<!-- Javascripts -->
-	<script src="js/jquery-2.1.4.min.js"></script>
+	<script th:src="@{js/jquery-2.1.4.min.js}"></script>
 	<!-- Dropdown Menu -->
-	<script src="js/hoverIntent.js"></script>
-	<script src="js/superfish.js"></script>
+	<script th:src="@{js/hoverIntent.js}"></script>
+	<script th:src="@{js/superfish.js}"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script th:src="@{js/bootstrap.min.js}"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script th:src="@{js/jquery.waypoints.min.js}"></script>
 	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
+	<script th:src="@{js/jquery.countTo.js}"></script>
 	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
+	<script th:src="@{js/jquery.stellar.min.js}"></script>
 	<!-- Owl Slider -->
 	<!-- // <script src="js/owl.carousel.min.js"></script> -->
 	<!-- Date Picker -->
-	<script src="js/bootstrap-datepicker.min.js"></script>
+	<script th:src="@{js/bootstrap-datepicker.min.js}"></script>
 	<!-- CS Select -->
-	<script src="js/classie.js"></script>
-	<script src="js/selectFx.js"></script>
+	<script th:src="@{js/classie.js}"></script>
+	<script th:src="@{js/selectFx.js}"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script th:src="@{js/jquery.flexslider-min.js}"></script>
 
-	<script src="js/custom.js"></script>
+	<script th:src="@{js/custom.js}"></script>
 
 </body>
 </html>

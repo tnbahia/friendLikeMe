@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 public class FriendService {
     private OfferDao offerdao;
 
-
     public void save(Offer offer) {
         offerdao.add(offer);
     }
