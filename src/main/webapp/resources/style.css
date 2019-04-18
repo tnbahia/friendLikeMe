@@ -3097,6 +3097,7 @@ legend {
 }
 
 label {
+  color: #FFFFFF;
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
@@ -3147,8 +3148,8 @@ output {
 }
 
 .form-control {
-  display: block;
-  width: 100%;
+
+  width: 95%;
   height: 50px;
   padding: 14px 12px;
   font-size: 14px;
@@ -8036,7 +8037,7 @@ div.cs-select span {
 }
 
 #availability {
-  background: #FF5722;
+  background: rgba(144, 47, 19, 0.64);
   width: 50%;
   top: 1em;
   z-index: 99;
