@@ -1,8 +1,8 @@
-/Users/codecadet/Documents/GitHub/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/persistence/models/Offer.java
-/Users/codecadet/Documents/GitHub/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/controllers/RestFriendController.java
-/Users/codecadet/Documents/GitHub/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/controllers/MainController.java
-/Users/codecadet/Documents/GitHub/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/services/FriendService.java
-/Users/codecadet/Documents/GitHub/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/controllers/RESTUserController.java
-/Users/codecadet/Documents/GitHub/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/Main.java
-/Users/codecadet/Documents/GitHub/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/services/UserService.java
-/Users/codecadet/Documents/GitHub/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/persistence/dao/OfferDao.java
+/Users/codecadet/Repositories/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/persistence/dao/OfferDao.java
+/Users/codecadet/Repositories/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/services/FriendService.java
+/Users/codecadet/Repositories/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/services/UserService.java
+/Users/codecadet/Repositories/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/controllers/RestFriendController.java
+/Users/codecadet/Repositories/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/controllers/MainController.java
+/Users/codecadet/Repositories/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/persistence/models/Offer.java
+/Users/codecadet/Repositories/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/Main.java
+/Users/codecadet/Repositories/friendLikeMe/src/main/java/org/academiadecodigo/mainiacs/controllers/RESTUserController.java

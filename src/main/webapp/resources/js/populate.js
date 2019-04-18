@@ -60,21 +60,9 @@ function populateCustomers(response) {
             "<p><small>For as low as </small><span>" + element.price + " /per day</span></p>" +
         "</div></div>" +
         "<div class='desc'>" +
-            "<h3>" + element.name + "</h3>" +
+            "<h3>" + element.name  "</h3>" +
             "<p>" + element.email + "</p>" +
             "<p>" + element.phone + "</p>" +
-        "</div></div></div>"
-
-        "<div  class='col-md-6'>"+
-        "<div class='f-hotel'>" +
-        "<div class='image' style='background-image: url(images/hotel_feture_2.jpg);'>" +
-        "<div class='descrip text-center'>" +
-        "<p><small>For as low as</small><span>" + element.price + "</span></p>" +
-        "</div></div>" +
-        "<div class='desc'>" +
-        "<h3>" + element.name + "</h3>" +
-        "<p>" + element.email + "</p>" +
-        "<p>" + element.phone + "</p>" +
         "</div></div></div>"
         ;
 
