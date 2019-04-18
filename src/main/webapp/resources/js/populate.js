@@ -82,6 +82,7 @@ function populateCustomers(response) {
             "<p>" + element.phone + "</p>" +
             "<p>" + element.email + "</p>" +
             "</div></div></div>"
+
         ;
 
         $(elementStr).appendTo(offerTable);
