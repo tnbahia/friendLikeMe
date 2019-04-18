@@ -11,6 +11,7 @@ import java.util.List;
 @Component
 @Repository
 public class OfferDao {
+    public OfferDao() {}
 
     private List<Offer> list = new LinkedList<>();
 

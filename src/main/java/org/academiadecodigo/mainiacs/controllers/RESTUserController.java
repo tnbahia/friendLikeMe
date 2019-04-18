@@ -2,6 +2,7 @@ package org.academiadecodigo.mainiacs.controllers;
 
 import org.academiadecodigo.mainiacs.persistence.models.Offer;
 import org.academiadecodigo.mainiacs.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/host")
 public class RESTUserController {
-    private UserService userService = new UserService();
+    private UserService userService;
 
     @RequestMapping(method = RequestMethod.GET, path = {"","/"})
     public ResponseEntity<List> listAllHosts() {
@@ -31,5 +32,10 @@ public class RESTUserController {
             }
         }
         return new ResponseEntity<List>(filteredList,HttpStatus.OK);
+    }
+
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 }
