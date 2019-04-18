@@ -1,53 +1,21 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Friend like me</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="A app to find a friend to your best friend" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend like me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A app to find a friend to your best friend"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
 
 
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,900,700,900italic' rel='stylesheet' type='text/css'> -->
 
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,900,700,900italic' rel='stylesheet' type='text/css'> -->
-
-	<!-- Stylesheets -->
-	<!-- Dropdown Menu -->
-	<link rel="stylesheet" href="css/superfish.css">
-	<!-- Owl Slider -->
-	<!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
-	<!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
-	<!-- Date Picker -->
-	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-	<!-- CS Select -->
-	<link rel="stylesheet" href="css/cs-select.css">
-	<link rel="stylesheet" href="css/cs-skin-border.css">
-
-	<!-- Themify Icons -->
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<!-- Flat Icon -->
-	<link rel="stylesheet" href="css/flaticon.css">
-	<!-- Icomoon -->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	
-	<!-- Style -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    <!-- Stylesheets -->
+    <!-- Dropdown Menu -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/superfish.css}">
 
 </head>
 <body>
@@ -150,22 +118,7 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="row">
-				<div class="feature-full-1col">
-					<div class="image" style="background-image: url(images/hotel_feture_1.jpg);">
-						<div class="descrip text-center">
-							<p><small>For as low as</small><span th:text="${friend.price}">$50/night</span></p>
-						</div>
-					</div>
-					<div class="desc">
-						<p th:text="${friend.id}" type="hidden" ></p>
-						<h3 th:text="${friend.firstName}">Erick</h3>
-						<p th:text="${friend.bio}">Hello, I´m Erick and I love pets! I live in a apartment in the city center, and I can host you dog during weekdays only</p>
-						<p><a th:href="@{'/friend/' + ${friend.id}}" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
-					</div>
-				</div>
-
 				<div class="feature-full-2col">
 					<div class="f-hotel">
 						<div class="image" style="background-image: url(images/hotel_feture_2.jpg);">
@@ -175,8 +128,13 @@
 						</div>
 						<div class="desc">
 							<p th:text="${friend.id}" type="hidden" ></p>
+<<<<<<< HEAD
 							<h3 th:text="${offer.firstName}">Nuno</h3>
 							<p th:text="${friend.bio}">I'm Nuno. I'm available to host your pet at weekends and holiday. I live around the river side </p>
+=======
+							<h3 th:text="${friend.firstName}"></h3>
+							<p th:text="${friend.bio}"></p>
+>>>>>>> a2e4647777dbc50bcf51b50d82da2c7108088ca4
 							<p><a th:href="@{'/friend/' + ${friend.id}}" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
 						</div>
 					</div>
@@ -188,8 +146,8 @@
 						</div>
 						<div class="desc">
 							<p th:text="${friend.id}" type="hidden" ></p>
-							<h3 th:text="${friend.firstName}">Ana</h3>
-							<p th:text="${friend.bio}" >Hello! I'm Ana and a have a house with a big garden. I have a dog, he's lovely and friendly. If you like us we'll be happy to host you anytime.</p>
+							<h3 th:text="${friend.firstName}"></h3>
+							<p th:text="${friend.bio}" ></p>
 							<p><a th:href="@{'/friend/' + ${friend.id}}" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
 						</div>
 					</div>
