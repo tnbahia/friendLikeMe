@@ -67,12 +67,12 @@ function populateCustomers(response) {
     var elementStr;
     var offerTable = $("#offer-table");
     console.log(response)
-
+    var index = 1;
     response.forEach(function (element) {
         elementStr =
             "<div  class='feature-full-2col'>" +
             "<div class='f-hotel'>" +
-            "<div class='image' style='background-image: url(images/hotel_feture_2.jpg);'>" +
+            "<div class='image' style='background-image: url(images/hotel_feture_"+index+".jpg);'>" +
             "<div class='descrip text-center'>" +
             "<p><small>For as low as </small><span>" + element.price + " €/per day</span></p>" +
             "</div>" + "</div>" +
@@ -85,6 +85,7 @@ function populateCustomers(response) {
             "</div></div></div>"
 
         ;
+        index++;
 
         $(elementStr).appendTo(offerTable);
     });
