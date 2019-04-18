@@ -8037,9 +8037,9 @@ div.cs-select span {
 }
 
 #availability {
-  background: rgba(144, 47, 19, 0.64);
+  background: rgba(99, 86, 99, 0.67);
   width: 50%;
-  top: 1em;
+  top: auto;
   z-index: 99;
   position: relative;
   display: inline-block;
