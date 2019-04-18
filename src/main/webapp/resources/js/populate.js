@@ -58,8 +58,13 @@ function add() {
         async: true,
         dataType: 'json',
         contentType: 'application/json',
-        success: populateCustomers
+        success: showHome,
+        error: showHome
     });
+}
+
+function showHome() {
+    window.location.href = "http://localhost:8080/afriendlikeme/";
 }
 
 function populateCustomers(response) {

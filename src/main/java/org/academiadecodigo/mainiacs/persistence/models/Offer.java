@@ -2,17 +2,33 @@ package org.academiadecodigo.mainiacs.persistence.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "offers")
 public class Offer {
+    @NotNull(message = "Name is mandatory")
+    @NotBlank(message = "Name is mandatory")
+    @Size(min = 3, max = 64)
     private String name;
+
+    @Email
+    @NotBlank(message = "Email is mandatory")
     private String email;
+
+    @Pattern(regexp = "^\\+?[0-9]*$", message = "Phone number contains invalid characters")
+    @Size(min = 9, max = 16)
     private String phone;
-    private int price;
+
+    @NotNull(message = "Price is mandatory")
+    private Integer price;
     private String startDate;
     private String endDate;
+
+    @NotNull(message = "City is mandatory")
+    @NotBlank(message = "Name is mandatory")
+    @Size(min = 3, max = 64)
     private String city;
 
     public Offer(){
