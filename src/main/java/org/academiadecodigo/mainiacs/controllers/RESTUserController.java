@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/host")
 public class RESTUserController {
+
     private UserService userService = new UserService();
 
     @Autowired
@@ -38,4 +39,6 @@ public class RESTUserController {
         }
         return new ResponseEntity<List>(filteredList,HttpStatus.OK);
     }
+
+
 }

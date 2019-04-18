@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
+
 @Controller
 @RestController
 @RequestMapping("/api/host")
@@ -23,16 +25,22 @@ public class RestFriendController {
 
     private FriendService friendService;
 
+    @Autowired
+    public void setFriendService(FriendService friendService) {
+        this.friendService = friendService;
+    }
+
+
     @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
-    public ResponseEntity addOffer(/*@valid*/ @RequestBody Offer offer, BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<Offer> addOffer(@Valid @RequestBody Offer offer, BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
 
         if (bindingResult.hasErrors()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
-        friendService.save(offer);
+        Offer offer1 = friendService.save(offer);
         // get help from the framework building the path for the newly created resource
-        //UriComponents uriComponents = uriComponentsBuilder.path("/api/host/" + offer..build();
+        //UriComponents uriComponents = uriComponentsBuilder.path("/api/host/" + offer1.build();
 
 
         // set headers with the created path
@@ -42,8 +50,4 @@ public class RestFriendController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @Autowired
-    public void setFriendService(FriendService friendService) {
-        this.friendService = friendService;
-    }
 }

@@ -12,28 +12,18 @@ import java.util.List;
 @Service
 public class UserService {
     private OfferDao offerDao = new OfferDao();
+    private List<Offer> offerList = new LinkedList<>();
 
-    public List<Offer> listServices() {
-        List<Offer> offerList = new LinkedList<>();
-        Offer s = new Offer("Tiago",
-                "ojicois",
-                "09809123",
-                40,
-                new Date(2019,1,23),
-                new Date(2019,2,26),
-                "Porto");
-        Offer t = new Offer("Bahia",
-                "sdfs",
-                "12312332",
-                30,
-                new Date(2019,4,23),
-                new Date(2019,7,26),
-                "Porto");
+    public List<Offer> listServices(List<Offer> offerList) {
+        return offerList;
 
-        offerList.add(s);
-        offerList.add(t);
+    }
+
+    public List<Offer> addOffer(Offer offer) {
+        offerList.add(offer);
         return offerList;
     }
+
 
     @Autowired
     public void setOfferDao(OfferDao offerDao) {

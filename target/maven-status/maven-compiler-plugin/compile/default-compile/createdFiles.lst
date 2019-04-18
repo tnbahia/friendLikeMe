@@ -1,5 +1,7 @@
 org/academiadecodigo/mainiacs/Main.class
 org/academiadecodigo/mainiacs/test.class
+org/academiadecodigo/mainiacs/persistence/models/User.class
+org/academiadecodigo/mainiacs/persistence/models/Reserve.class
 org/academiadecodigo/mainiacs/controllers/MainController.class
 org/academiadecodigo/mainiacs/services/UserService.class
 org/academiadecodigo/mainiacs/HostService.class

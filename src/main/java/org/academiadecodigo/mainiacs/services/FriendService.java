@@ -10,7 +10,8 @@ public class FriendService {
     private OfferDao offerdao;
 
 
-    public void save(Offer offer) {
+    public Offer save(Offer offer) {
         offerdao.add(offer);
+        return offer;
     }
 }
