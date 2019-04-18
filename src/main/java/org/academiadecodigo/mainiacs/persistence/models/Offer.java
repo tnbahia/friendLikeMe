@@ -11,10 +11,15 @@ public class Offer {
     private String email;
     private String phone;
     private int price;
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
+    private String city;
 
-    public Offer(String name, String email, String phone, int price, Date startDate, Date endDate, String city) {
+    public Offer(){
+
+    }
+
+    public Offer(String name, String email, String phone, int price, String startDate, String endDate, String city) {
 
         this.name = name;
         this.email = email;
@@ -25,19 +30,19 @@ public class Offer {
         this.city = city;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
@@ -72,8 +77,6 @@ public class Offer {
     public void setCity(String city) {
         this.city = city;
     }
-
-    private String city;
 
     public int getPrice() {
         return price;

@@ -105,46 +105,49 @@
                     <div class="col-md-12">
 
                         <div class="row">
-                            <form class="form-horizontal" th:object="${offer}" th:action="@{'/api/host'}" method="post">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name"/>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="name" type="text" class="form-control" placeholder="Name"/>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Email" th:field="*{email}"/>
-                                    </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="email" type="text" class="form-control" placeholder="Email"/>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Phone" th:field="*{phone}"/>
-                                    </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="phone" class="form-control" placeholder="Phone"/>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="From dd/mm/aaaa"
-                                               th:field="*{startDate}"/>
-                                        <br>
-                                        <input type="text" class="form-control" placeholder="To dd/mm/aaaa"
-                                               th:field="*{endDate}"/>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="price" class="form-control" placeholder="Price"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="city" class="form-control" placeholder="City"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input id="startDate" class="form-control"
+                                           placeholder="From dd/mm/aaaa"/>
+                                    <br>
+                                    <input id="endDate" class="form-control" placeholder="To dd/mm/aaaa"/>
 
-                                    </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
                                         <textarea name="" class="form-control" id="" cols="30" rows="7"
                                                   placeholder="Describe yourself"></textarea>
-                                    </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary" name="action" value="save">
-                                            Register
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
+                            <div class="col-md-12">
+                                <button id="register-button" type="button" class="btn btn-primary">Register</button>
+                            </div>
                         </div>
                     </div>
 
@@ -166,7 +169,7 @@
                     <div class="col-md-3">
                         <div class="copyright">
                             <p>
-                                <small>Charlie Team - #25 MAINiacs <br> All Rights Reserved. <br></small>
+                                <small> Team Charlie - #25 MAINiacs <br> All Rights Reserved. <br></small>
 
                         </div>
                     </div>
@@ -186,7 +189,7 @@
                                 <p>Sign up for Friendly news</p>
                                 <form action="#" id="form-subscribe">
                                     <div class="form-field">
-                                        <input type="email" placeholder="Email Address" id="email">
+                                        <input type="email" placeholder="Email Address" id="emailSubscribe">
                                         <input type="submit" id="submit" value="Send">
                                     </div>
                                 </form>

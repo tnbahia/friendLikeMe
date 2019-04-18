@@ -15,7 +15,7 @@ public class MainController {
         return "index1";
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/contact")
+    @RequestMapping(method = RequestMethod.GET, path = {"/contact","host/contact"})
     public String contact() {
         System.out.println("ochja");
         return "contact";

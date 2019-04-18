@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public class UserService {
-    private OfferDao offerDao = new OfferDao();
+    private OfferDao offerDao;
 
     public List<Offer> listServices() {
         return offerDao.getList();

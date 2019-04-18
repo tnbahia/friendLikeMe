@@ -16,19 +16,19 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
-@Controller
 @RestController
 @RequestMapping("/api/host")
 public class RestFriendController {
 
     private FriendService friendService;
 
-    @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
-    public ResponseEntity addOffer(/*@valid*/ @RequestBody Offer offer, BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
+    @RequestMapping(method = RequestMethod.POST, path = {"/", "","index.html"})
+    public String addOffer(@RequestBody Offer offer) {
 
         /*if (bindingResult.hasErrors()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }*/
+        System.out.println("addingOffer\n\n\n\n\n\n\n\n\n\n\n");
 
         friendService.save(offer);
         // get help from the framework building the path for the newly created resource
@@ -39,7 +39,7 @@ public class RestFriendController {
         //HttpHeaders headers = new HttpHeaders();
         //headers.setLocation(uriComponents.toUri());
 
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return "redirect:/index.html";
     }
 
     @Autowired
