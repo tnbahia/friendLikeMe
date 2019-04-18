@@ -15,7 +15,7 @@ import java.util.List;
 public class RESTUserController {
     private UserService userService = new UserService();
 
-    @RequestMapping(method = RequestMethod.GET, path = "/")
+    @RequestMapping(method = RequestMethod.GET, path = {"","/"})
     public ResponseEntity<List> listAllHosts() {
         List<Offer> offerList = userService.listServices();
         return new ResponseEntity<List>(offerList, HttpStatus.OK);

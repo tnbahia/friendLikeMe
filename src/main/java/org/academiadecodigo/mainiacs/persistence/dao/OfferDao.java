@@ -17,14 +17,28 @@ public class OfferDao {
     }
 
     public List<Offer> getList() {
-        Offer s = new Offer("Tiago",
+        Offer a = new Offer("Tiago",
                 "ojicois",
                 "09809123",
                 40,
                 new Date(2019,1,23),
                 new Date(2019,2,26),
                 "Porto");
-        Offer t = new Offer("Bahia",
+        Offer b = new Offer("Bahia",
+                "sdfs",
+                "12312332",
+                30,
+                new Date(2019,4,23),
+                new Date(2019,7,26),
+                "Porto");
+        Offer c = new Offer("Bahia",
+                "sdfs",
+                "12312332",
+                30,
+                new Date(2019,4,23),
+                new Date(2019,7,26),
+                "Porto");
+        Offer d = new Offer("Bahia",
                 "sdfs",
                 "12312332",
                 30,
@@ -32,8 +46,10 @@ public class OfferDao {
                 new Date(2019,7,26),
                 "Porto");
 
-        list.add(s);
-        list.add(t);
+        list.add(a);
+        list.add(b);
+        list.add(c);
+        list.add(d);
         return list;
     }
 

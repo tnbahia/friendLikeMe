@@ -1,19 +1,20 @@
-
-
 $(document).ready(function() {
     setupEventListener()
 });
 
 function setupEventListener() {
+    console.log("oasiuc")
     $("#search-button").click(function () {
+        console.log("cuahsioucha")
         fetchCustomers();
     })
 }
 
 //GET
 function fetchCustomers(){
+    console.log("kajshdkjah")
     $.ajax({
-        url: 'http://localhost:8080/afriendlikeme/api/host',
+        url: 'http://localhost:8080/afriendlikeme/api/host/',
         async: true,
         success:populateCustomers
     });
@@ -44,13 +45,15 @@ function add(){
 
 
 
-function populateCustomers(customerData) {
+function populateCustomers(response) {
+    console.log("Kjhcoijasopncpasoncpaonscopsan");
     var elementStr;
     var offerTable = $("#offer-table");
+    console.log(response)
 
-    customerData.forEach(function(element) {
+    response.forEach(function(element) {
         elementStr =
-            "<tr><td>div class='f-hotel'>" +
+            "<div class='f-hotel'>" +
             "<div class='image' style='background-image: url(images/hotel_feture_2.jpg);'>" +
             "<div class='descrip text-center'>" +
             "<p><small>For as low as</small><span>" + element.price + "</span></p>" +
@@ -59,7 +62,7 @@ function populateCustomers(customerData) {
             "<h3>" + element.name + "</h3>" +
             "<p>" + element.email + "</p>" +
             "<p>" + element.phone + "</p>" +
-        "</div> </td></tr>";
+        "</div>";
 
         $(elementStr).appendTo(offerTable);
     });
