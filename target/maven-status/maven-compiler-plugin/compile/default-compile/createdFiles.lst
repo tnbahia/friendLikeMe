@@ -1,2 +1,8 @@
+org/academiadecodigo/mainiacs/controllers/RESTUserController.class
+org/academiadecodigo/mainiacs/Main.class
+org/academiadecodigo/mainiacs/persistence/dao/OfferDao.class
+org/academiadecodigo/mainiacs/persistence/models/Offer.class
+org/academiadecodigo/mainiacs/controllers/MainController.class
 org/academiadecodigo/mainiacs/controllers/RestFriendController.class
+org/academiadecodigo/mainiacs/services/UserService.class
 org/academiadecodigo/mainiacs/services/FriendService.class
