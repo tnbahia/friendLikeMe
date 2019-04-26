@@ -11,7 +11,6 @@ public class FriendService {
     private OfferDao offerDao;
 
     public void save(Offer offer) {
-        System.out.println("saving\n\n\n\n\n\n\n\n\n\n\n");
         offerDao.add(offer);
     }
 

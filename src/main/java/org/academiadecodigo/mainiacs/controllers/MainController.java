@@ -11,13 +11,11 @@ public class MainController {
 
     @RequestMapping(method = RequestMethod.GET, path = {"/",""})
     public String home() {
-        System.out.println("ochja");
         return "index1";
     }
 
     @RequestMapping(method = RequestMethod.GET, path = {"/contact","host/contact"})
     public String contact() {
-        System.out.println("ochja");
         return "contact";
     }
 }

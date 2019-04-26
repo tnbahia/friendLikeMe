@@ -17,10 +17,7 @@ public class OfferDao {
     private List<Offer> list = new LinkedList<>();
 
     public void add(Offer offer) {
-        System.out.println("addingOfferDAO\n\n\n\n\n\n\n\n\n\n\n");
-        System.out.println("List size " + list.size());
         list.add(offer);
-        System.out.println("List size " + list.size());
     }
 
     public List<Offer> getList() {

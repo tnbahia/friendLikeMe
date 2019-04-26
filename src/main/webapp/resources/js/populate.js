@@ -45,16 +45,7 @@ function add() {
             startDate: $("#startDate").val(),
             endDate: $("#endDate").val(),
             city: $("#city").val()
-        })
-        /*data: JSON.stringify({
-            name: "FDabio",
-            email: "asdasd",
-            phone: "09809123",
-            price: "30",
-            startDate: "61509024000000",
-            endDate: "61511702400000",
-            city: "Liasbo"
-        })*/,
+        }),
         async: true,
         dataType: 'json',
         contentType: 'application/json',
@@ -68,7 +59,6 @@ function showHome() {
 }
 
 function populateCustomers(response) {
-    console.log("Kjhcoijasopncpasoncpaonscopsan");
     var elementStr;
     var offerTable = $("#offer-table");
     console.log(response)
